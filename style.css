@@ -71,6 +71,22 @@ h2 {
 
 p { margin: 0 0 0.6rem; }
 
+/* ---- entry with right-aligned meta (date / location) ---- */
+.entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin: 0;
+}
+.entry-meta {
+  flex-shrink: 0;
+  color: #777;
+  font-style: italic;
+  font-size: 0.92rem;
+  white-space: nowrap;
+}
+
 /* ---- news ---- */
 .news { margin: 0; padding-left: 1.2rem; }
 .news li { margin-bottom: 0.35rem; }
@@ -126,4 +142,5 @@ p { margin: 0 0 0.6rem; }
   .hero { flex-direction: column; align-items: flex-start; gap: 1rem; }
   .photo { width: 120px; }
   h1 { font-size: 1.7rem; }
+  .entry { flex-direction: column; gap: 0.1rem; }
 }
