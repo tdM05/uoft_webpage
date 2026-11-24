@@ -1,0 +1,129 @@
+/* Tadd Mao — academic homepage.
+   Plain UofT CS house style: white background, Charter serif, blue links.
+   Photo + prose-bio hero, then news and publications. No build step, no dark mode. */
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #111111;
+  font-family: Charter, Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.55;
+  text-rendering: optimizeLegibility;
+}
+
+main {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+a { color: #1a5fb4; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---- hero: photo + intro ---- */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.photo {
+  width: 150px;
+  height: auto;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.intro { min-width: 0; }
+
+h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin: 0 0 0.3rem;
+}
+
+.title {
+  margin: 0 0 0.6rem;
+  line-height: 1.4;
+  color: #333;
+}
+
+.links { margin: 0; }
+.links .sep { color: #bbb; margin: 0 0.15rem; }
+
+/* ---- about (lead prose) ---- */
+.about { margin-bottom: 1.5rem; }
+.about p { margin: 0 0 0.75rem; }
+.about p:last-child { margin-bottom: 0; }
+
+/* ---- sections ---- */
+section { margin-bottom: 1.6rem; }
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 1.8rem 0 0.7rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid #dddddd;
+}
+
+p { margin: 0 0 0.6rem; }
+
+/* ---- news ---- */
+.news { margin: 0; padding-left: 1.2rem; }
+.news li { margin-bottom: 0.35rem; }
+.news .date { color: #777; font-style: italic; margin-right: 0.3rem; }
+
+/* ---- publications ---- */
+.pub { margin-bottom: 1rem; }
+.pub:last-child { margin-bottom: 0; }
+
+.pub h3 {
+  font-size: 1.04rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0 0 0.15rem;
+}
+
+.pub .authors { margin: 0; }
+.pub .venue   { margin: 0.05rem 0 0; font-style: italic; color: #444; }
+.eq { color: #777; font-style: italic; }
+
+.pub-links { margin: 0.4rem 0 0; }
+.btn {
+  display: inline-block;
+  padding: 0.12rem 0.6rem;
+  margin-right: 0.4rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #1a5fb4;
+  border: 1px solid #b9d0ea;
+  border-radius: 4px;
+}
+.btn:hover {
+  text-decoration: none;
+  color: #ffffff;
+  background: #1a5fb4;
+  border-color: #1a5fb4;
+}
+
+/* ---- footer ---- */
+.site-footer {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #dddddd;
+  font-size: 0.9rem;
+  color: #666;
+}
+.site-footer p { margin: 0; }
+
+/* ---- small screens ---- */
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  main { padding: 2rem 1.1rem 3rem; }
+  .hero { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .photo { width: 120px; }
+  h1 { font-size: 1.7rem; }
+}
